@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Candle Cross — motocross no gráfico</title>
+  <meta name="description" content="Corra de moto de cross em cima do gráfico semanal real das suas criptos favoritas. Dados da Binance, backflips e crashes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,800;1,800&family=Saira:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <section id="screen-menu">
+    <header class="hero">
+      <h1 class="logo">CANDLE<span>CROSS</span></h1>
+      <p class="tagline">escolha um par e surfe o gráfico semanal — cada moeda é uma pista</p>
+    </header>
+    <div id="coin-list" class="coin-list"></div>
+    <footer class="menu-footer">dados: Binance · intervalo 1w · sem conexão, a pista vira simulada</footer>
+  </section>
+
+  <section id="screen-game" hidden>
+    <div class="game-frame">
+      <canvas id="game-canvas"></canvas>
+
+      <div class="hud hud-left">
+        <span class="hud-label" id="hud-coin">—</span>
+        <span class="hud-value" id="hud-price">—</span>
+        <span class="hud-sub"><span id="hud-week">—</span> · <span id="hud-dist">0 m</span></span>
+      </div>
+      <div class="hud hud-right">
+        <span class="hud-label">pontos</span>
+        <span class="hud-value" id="hud-score">0</span>
+      </div>
+
+      <div class="progress-rail"><div class="progress-fill" id="hud-progress"></div></div>
+      <span id="offline-badge" hidden>sem conexão com a Binance — pista simulada</span>
+
+      <div id="btn-brake" class="ctl ctl-left">freio</div>
+      <div id="btn-gas" class="ctl ctl-right">acelera</div>
+
+      <div id="overlay" hidden>
+        <div class="overlay-card">
+          <h2 id="overlay-title">Quebrou!</h2>
+          <p id="overlay-stats" class="overlay-stats"></p>
+          <div class="overlay-actions">
+            <button id="btn-retry" class="btn-primary">Correr de novo</button>
+            <button id="btn-menu">Trocar de moeda</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="controls-hint">segure <kbd>→</kbd>/<kbd>W</kbd> ou o botão direito para acelerar · <kbd>←</kbd>/<kbd>A</kbd> freia e gira pra trás no ar · giro completo = +500</p>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
