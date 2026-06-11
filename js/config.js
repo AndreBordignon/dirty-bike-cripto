@@ -12,7 +12,7 @@ export const COINS = [
 ];
 
 export const PHYS = {
-  G: 1500,        // gravidade px/s²
+  G: 2500,        // gravidade px/s²
   ACC: 760,       // aceleração no chão
   BRAKE: 1150,    // força de freio
   DRAG: 0.22,     // arrasto proporcional
